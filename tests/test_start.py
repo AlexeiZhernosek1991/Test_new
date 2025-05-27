@@ -8,20 +8,24 @@ url2 = 'http://uitestingplayground.com/'
 
 
 #
-# def test_start():
-#     with sync_playwright() as web_db:
-#         browser = web_db.chromium.launch(headless=False, slow_mo=1500)
-#         page = browser.new_page()
-#         page.goto(url)
-#         def accept_alert(alert: Dialog):
-#             print('<<<'+alert.message+'>>>')
-#             alert.accept()
-#         # page.on("response", accept_alert)
-#         page.get_by_role("link", name='Samsung galaxy s6').click()
-#         page.on('dialog', accept_alert)
-#         page.get_by_role("link", name="Add to cart").click()
-#         time.sleep(5)
+def test_start():
+    with sync_playwright() as web_db:
+        browser = web_db.chromium.launch(headless=False, slow_mo=1500)
+        page = browser.new_page()
+        page.goto(url)
 
+        def accept_alert(alert: Dialog):
+            print('<<<' + alert.message + '>>>')
+            alert.accept()
+
+        # page.on("response", accept_alert)
+        page.get_by_role("link", name='Samsung galaxy s6').click()
+        page.on('dialog', accept_alert)
+        page.get_by_role("link", name="Add to cart").click()
+        time.sleep(5)
+
+
+#
 def test_start2() -> None:
     def get_alert(resp: Dialog):
         time.sleep(3)
@@ -71,7 +75,7 @@ def test_start2() -> None:
 # with sync_playwright() as web_db:
 #     browser = web_db.chromium.launch(headless=False)
 #     page = browser.new_page()
-
+#
 # page.goto("https://www.saucedemo.com/inventory.html", )
 # input_name = page.get_by_placeholder("Username")
 # input_name.fill(user_name)
@@ -96,7 +100,7 @@ def test_start2() -> None:
 #    Log_in_test(sync_playwright).make_login()
 
 # web_db = sync_playwright().start()
-# browser = web_db.chromium.launch(headless=False, slow_mo=1000)
+# browser = web_db.firefox.launch(headless=False, slow_mo=1000)
 # page = browser.new_page()
 # page.goto('https://www.saucedemo.com/')
 # page.get_by_placeholder("Username").fill('standard_user')

@@ -4,8 +4,11 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.1venv" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/.myvenv" />
+      <excludeFolder url="file://$MODULE_DIR$/.1myvenv" />
+      <excludeFolder url="file://$MODULE_DIR$/env" />
     </content>
-    <orderEntry type="jdk" jdkName="Poetry (pythonProject1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (pythonProject1) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
